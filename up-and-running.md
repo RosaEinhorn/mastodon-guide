@@ -139,6 +139,8 @@ As we've changed the config, we'll need to build again:
 
 `docker-compose build`
 
+`chown -R 991:991 public`***<== this is needed everytime you build the containers, otherwise you won't be able to precompile the assets***
+
 Now it's time to run migrations: 
 
 `docker-compose run --rm web rails db:migrate`
